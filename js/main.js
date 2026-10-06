@@ -1,6 +1,6 @@
 /* OLIMAIS — site público. JavaScript simples, sem bibliotecas.
-   Faz três coisas: abre/fecha o menu no celular, controla o carrossel de
-   depoimentos e atualiza o ano no rodapé. Se o JavaScript falhar, o site
+   Faz quatro coisas: abre/fecha o menu no celular, controla o carrossel de
+   depoimentos, atualiza o ano no rodapé e mostra os posts mais recentes do Instagram. Se o JavaScript falhar, o site
    continua inteiro legível (só o menu e as setas do carrossel deixam de abrir). */
 (function () {
   'use strict';
@@ -14,6 +14,42 @@
   // ---- Ano do rodapé ----
   var ano = doc.getElementById('ano');
   if (ano) ano.textContent = String(new Date().getFullYear());
+
+  // ---- Instagram: troca os quadrinhos fixos pelos posts mais recentes ----
+  // A automação do GitHub (scripts/instagram_sync.py) grava data/instagram.json e as imagens em
+  // img/instagram/. Se o arquivo não existir, estiver vazio ou for inválido, os quadrinhos fixos
+  // que já estão no HTML continuam valendo. Só são aceitos links do Instagram e imagens da pasta
+  // img/instagram/ (nada de fora), e tudo é montado como texto, nunca como HTML.
+  var feed = doc.querySelector('[data-insta-feed]');
+  if (feed && window.fetch) {
+    var LINK_OK = /^https:\/\/(www\.)?instagram\.com\/(p|reel|reels|tv)\/[A-Za-z0-9_-]+\/?(\?\S*)?$/;
+    var IMG_OK = /^img\/instagram\/[A-Za-z0-9_-]+\.jpg$/;
+    window.fetch(feed.getAttribute('data-insta-feed'), { cache: 'no-cache' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        if (!d || !d.posts || !d.posts.length) return;
+        var posts = [];
+        for (var i = 0; i < d.posts.length && posts.length < 12; i++) {
+          var p = d.posts[i];
+          if (p && LINK_OK.test(String(p.url)) && IMG_OK.test(String(p.image))) posts.push(p);
+        }
+        if (!posts.length) return;
+        var frag = doc.createDocumentFragment();
+        posts.forEach(function (p) {
+          var a = doc.createElement('a');
+          a.href = p.url; a.target = '_blank'; a.rel = 'noopener';
+          if (p.video) a.className = 'is-video';
+          var img = doc.createElement('img');
+          img.src = p.image; img.width = 640; img.height = 640; img.loading = 'lazy'; img.decoding = 'async';
+          img.alt = String(p.alt || 'Publicação do Instagram da OLIMAIS').slice(0, 160);
+          a.appendChild(img);
+          frag.appendChild(a);
+        });
+        while (feed.firstChild) feed.removeChild(feed.firstChild);
+        feed.appendChild(frag);
+      })
+      .catch(function () { /* sem problema: ficam os quadrinhos fixos */ });
+  }
 
   // ---- Menu no celular ----
   var header = doc.querySelector('.site-header');

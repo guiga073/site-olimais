@@ -1,0 +1,75 @@
+# Atualiza sozinho os quadrinhos do Instagram do site.
+#
+#  - roda a cada 6 horas (e quando você aperta "Run workflow" na aba Actions);
+#  - toda segunda-feira também renova a chave do Instagram (ela vale 60 dias);
+#  - se houver post novo, guarda as imagens no repositório e pede ao GitHub Pages para
+#    publicar o site de novo. (Um commit feito por esta automação NÃO dispara a
+#    publicação sozinho; por isso o passo "Pedir a publicação do site".)
+#  - a chave fica no segredo INSTAGRAM_TOKEN (Settings > Secrets and variables > Actions);
+#    ela nunca é escrita em arquivo nem aparece nos registros.
+#
+# Se algo falhar, o site continua mostrando os últimos posts, e o GitHub costuma avisar por e-mail.
+name: Atualizar posts do Instagram
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'   # a cada 6 horas (horário UTC)
+    - cron: '43 5 * * 1'     # segundas-feiras: também renova a chave
+  workflow_dispatch:         # botão "Run workflow" (rodar na hora)
+
+permissions:
+  contents: write            # guardar os posts novos no repositório
+  pages: write               # pedir a publicação do site
+  actions: write             # impedir que o GitHub desligue esta tarefa por falta de atividade
+
+concurrency:
+  group: instagram
+  cancel-in-progress: false
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Baixar o site
+        uses: actions/checkout@v4
+
+      - name: Preparar o Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar Pillow (reduz as imagens)
+        run: pip install --quiet pillow
+
+      - name: Buscar os posts do Instagram
+        id: buscar
+        env:
+          INSTAGRAM_TOKEN: ${{ secrets.INSTAGRAM_TOKEN }}
+          INSTAGRAM_POSTS: '4'     # quantos posts mostrar no site (de 1 a 12)
+          INSTAGRAM_REFRESH: ${{ (github.event_name == 'workflow_dispatch' || github.event.schedule == '43 5 * * 1') && '1' || '0' }}
+        run: python scripts/instagram_sync.py
+
+      - name: Guardar no repositório
+        if: steps.buscar.outputs.changed == 'true'
+        run: |
+          git config user.name "OLIMAIS (automação)"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/instagram.json img/instagram
+          git commit -m "Atualiza posts do Instagram"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+
+      - name: Pedir a publicação do site
+        if: steps.buscar.outputs.changed == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/${{ github.repository }}/pages/builds"
+
+      - name: Evitar que o GitHub desligue esta tarefa
+        if: always()
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method PUT "repos/${{ github.repository }}/actions/workflows/instagram.yml/enable"
