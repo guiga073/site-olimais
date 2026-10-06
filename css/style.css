@@ -380,8 +380,13 @@ h3 { font-size: clamp(1.3rem, 1.1rem + .8vw, 1.65rem); line-height: 1.2; }
 /* título à esquerda; texto e botões ao lado direito */
 .page-hero__grid { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: clamp(32px, 6vw, 96px); align-items: center; }
 .page-hero h1 { width: min-content; font-size: clamp(2.5rem, 1rem + 4.8vw, 4.6rem); }
-.page-hero .lead { max-width: 30ch; }
+.page-hero .lead { max-width: 36ch; font-size: clamp(1.15rem, 1rem + .7vw, 1.5rem); text-wrap: balance; }
 .page-hero .hero__actions { margin-top: clamp(22px, 2.6vw, 32px); }
+/* linha de apoio para quem já é professor: fica abaixo do botão principal, mais discreta */
+.page-hero__portal { margin-top: clamp(16px, 2vw, 24px); font-size: 1rem; color: var(--ink-2); }
+.page-hero__portal a { display: inline-flex; align-items: center; gap: .4rem; min-height: 44px; margin-left: .25rem; font-weight: 600; color: var(--ink); text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 2px; text-decoration-color: var(--clay); }
+.page-hero__portal a:hover { text-decoration-color: var(--ink); }
+.page-hero__portal .ico { width: 1.05em; height: 1.05em; }
 @media (max-width: 900px) { .page-hero__grid { grid-template-columns: minmax(0, 1fr); gap: 22px; } }
 
 /* linha curta de vantagens */
