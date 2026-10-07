@@ -282,6 +282,21 @@ h3 { font-size: clamp(1.3rem, 1.1rem + .8vw, 1.65rem); line-height: 1.2; }
 .about-text .kicker { font-weight: 700; font-size: clamp(1.15rem, 1rem + .6vw, 1.4rem); line-height: 1.35; color: var(--clay-ink); margin-bottom: 1rem; }
 .about-text .closing { font-weight: 700; margin-top: 1.3em; }
 .about-text .welcome { margin-top: 1.6rem; padding-top: 1.4rem; border-top: 3px solid var(--clay); max-width: 22em; font-size: 1.1rem; }
+/* Sobre nós, no computador: tudo na mesma grade de 5 + 7 colunas (a mesma de "Nossa forma de fazer"),
+   com as fotos alinhadas à margem e o texto de cada bloco alinhado com o parágrafo de cima.
+   No celular e no tablet estreito (até 900 px) nada disto vale: lá o layout em coluna única continua como estava. */
+@media (min-width: 901px) {
+  .about-intro, .about-row { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 6vw, 88px); }
+  .about-row--flip { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+  .about-row { margin-top: clamp(48px, 6vw, 80px); }
+  .about-photo { max-width: none; justify-self: stretch; }
+  .about-photo img { aspect-ratio: 4 / 5; }
+  .about-photo--juliana img { object-position: center 30%; }
+  .about-photo--duas img { object-position: center 25%; }
+  .about-intro h2 { text-wrap: wrap; }                       /* quebra "Quem é a / OLIMAIS" (o equilíbrio automático cortava "Quem é / a OLIMAIS") */
+  .about-text .kicker { text-wrap: balance; }                /* a frase em vermelho não deixa uma palavra sozinha na 2ª linha */
+  .about-text .prose { max-width: 36em; font-size: 1.06rem; line-height: 1.7; }
+}
 @media (max-width: 900px) {
   .about-intro, .about-row, .about-row--flip { grid-template-columns: minmax(0, 1fr); }
   .about-row--flip .about-photo { order: 0; }
