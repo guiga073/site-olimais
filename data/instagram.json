@@ -1,6 +1,14 @@
 {
-  "updated": "2026-10-15T21:23:56Z",
+  "updated": "2026-10-19T13:18:10Z",
   "posts": [
+    {
+      "id": "18371634175214610",
+      "url": "https://www.instagram.com/p/DerUcEiiL7J/",
+      "image": "img/instagram/18371634175214610.jpg",
+      "alt": "Aprender vai muito além de melhorar uma nota. 💛",
+      "video": false,
+      "date": "2026-10-19"
+    },
     {
       "id": "18029455409883642",
       "url": "https://www.instagram.com/reel/DehwsHPtR9P/",
@@ -24,14 +32,6 @@
       "alt": "“Eu não consigo.”",
       "video": false,
       "date": "2026-10-07"
-    },
-    {
-      "id": "18135911404660944",
-      "url": "https://www.instagram.com/p/DeKD4b0Nt5L/",
-      "image": "img/instagram/18135911404660944.jpg",
-      "alt": "A reta final do ano chegou e, com ela, as últimas provas e avaliações. 📚",
-      "video": false,
-      "date": "2026-10-06"
     }
   ]
 }
