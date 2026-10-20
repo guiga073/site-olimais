@@ -53,7 +53,7 @@
         btn.addEventListener('click', function () {
           var open = fig.classList.toggle('is-open');
           btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-          car.classList.toggle('has-open', !!car.querySelector('.quote.is-open'));
+          fit();
           btn.textContent = open ? 'Mostrar menos' : 'Ler depoimento completo';
         });
         fig.insertBefore(btn, fig.querySelector('figcaption'));
@@ -81,8 +81,14 @@
       return best;
     };
 
+    // A altura da faixa acompanha o depoimento que está na tela (sem espaço em branco do maior).
+    var fit = function () {
+      track.style.height = slides[index].offsetHeight + 'px';
+    };
+
     var paint = function () {
       index = current();
+      fit();
       for (var i = 0; i < dots.length; i++) dots[i].setAttribute('aria-current', i === index ? 'true' : 'false');
       prev.disabled = index === 0;
       next.disabled = index === slides.length - 1;
@@ -114,6 +120,8 @@
       window.requestAnimationFrame(function () { paint(); ticking = false; });
     }, { passive: true });
     window.addEventListener('resize', paint);
+    window.addEventListener('load', paint);
+    if (doc.fonts && doc.fonts.ready) doc.fonts.ready.then(paint);
     paint();
   }
 })();
