@@ -15,11 +15,10 @@ site só tem botões "Acessar portal" que levam até ele.
 *Já conferido: o CNPJ (67.935.598/0001-81), o Instagram (`@olimaisoficial`), o LinkedIn
 (`linkedin.com/company/olimais`) e as fotos (versões em alta qualidade, otimizadas para o site).*
 
-1. **Troque o link do formulário de professores.** O botão grande "Quero dar aulas", na caixa
-   "Quer fazer parte da OLIMAIS?" (fim da página de professores), aponta para um endereço de exemplo:
-   `https://forms.gle/LINK-DO-FORMULARIO`. Quando o formulário estiver pronto, procure
-   `LINK-DO-FORMULARIO` no `professores.html` e troque pelo link real (ou me envie o link que eu
-   troco). **Não publique com o endereço de exemplo**: ele abre uma página de erro.
+1. **Formulário de professores.** Os dois botões "Quero dar aulas" da página de professores (o do topo e o da caixa
+   "Quer fazer parte da OLIMAIS?", no fim da página) abrem o Google Forms da OLIMAIS. Para trocar o formulário um dia,
+   procure `docs.google.com/forms` no `professores.html` (são 2 ocorrências) e troque nas duas. O WhatsApp continua só
+   nos botões "Fale conosco" e nos ícones do cabeçalho e do rodapé.
 2. **Depoimentos reais.** Os 7 depoimentos da seção "O que as famílias dizem" são relatos reais enviados pela
    OLIMAIS. Confirme que cada pessoa autorizou a publicação (e, no caso de alunos menores de idade, que o responsável
    autorizou). Por privacidade, o site mostra só o primeiro nome e o papel (mãe, pai, aluno), sem nomes de filhos nem de
