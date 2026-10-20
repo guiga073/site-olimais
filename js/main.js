@@ -41,6 +41,24 @@
   if (car) {
     var track = car.querySelector('[data-track]');
     var slides = track.children;
+    // Depoimentos longos aparecem resumidos, com botão "Ler completo". Sem JavaScript, aparecem inteiros.
+    var longQuotes = car.querySelectorAll('.quote--long');
+    for (var q = 0; q < longQuotes.length; q++) {
+      (function (fig) {
+        var btn = doc.createElement('button');
+        btn.type = 'button';
+        btn.className = 'quote__more';
+        btn.textContent = 'Ler depoimento completo';
+        btn.setAttribute('aria-expanded', 'false');
+        btn.addEventListener('click', function () {
+          var open = fig.classList.toggle('is-open');
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+          car.classList.toggle('has-open', !!car.querySelector('.quote.is-open'));
+          btn.textContent = open ? 'Mostrar menos' : 'Ler depoimento completo';
+        });
+        fig.insertBefore(btn, fig.querySelector('figcaption'));
+      })(longQuotes[q]);
+    }
     var dotsBox = car.querySelector('[data-dots]');
     var prev = car.querySelector('[data-prev]');
     var next = car.querySelector('[data-next]');

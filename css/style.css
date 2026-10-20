@@ -297,10 +297,15 @@ h3 { font-size: clamp(1.3rem, 1.1rem + .8vw, 1.65rem); line-height: 1.2; }
 .quote__watermark { position: absolute; z-index: 0; right: -3%; bottom: -14%; width: min(300px, 46%); color: var(--sun-wash); pointer-events: none; }
 .quote > *:not(.quote__watermark) { position: relative; z-index: 1; }
 .quote__mark { font-size: clamp(4.5rem, 10vw, 7rem); line-height: .8; font-weight: 700; color: var(--clay); }
-.quote p { font-weight: 300; font-size: clamp(1.2rem, 1rem + 1.1vw, 1.8rem); line-height: 1.45; max-width: 34ch; }
+.quote p { font-weight: 300; font-size: clamp(1.05rem, .95rem + .6vw, 1.35rem); line-height: 1.55; max-width: 58ch; }
+.quote blockquote p + p { margin-top: .8em; }
 .quote figcaption { grid-column: 2; margin-top: 1.4rem; display: flex; align-items: center; gap: 12px; font-weight: 500; }
 .quote figcaption::before { content: ""; width: 34px; height: 2px; background: var(--clay); }
 .tag { font-size: .78rem; font-weight: 500; padding: .2rem .65rem; border-radius: 999px; background: var(--sun-wash); color: var(--ink-2); }
+.carousel.has-open .carousel__track { align-items: flex-start; }
+.quote__more { grid-column: 2; justify-self: start; margin-top: 1rem; padding: .5rem 1rem; border: 2px solid var(--ink); border-radius: 999px; background: transparent; color: var(--ink); font: inherit; font-size: .92rem; font-weight: 500; cursor: pointer; }
+.quote__more:hover { background: var(--sun); }
+.js .quote--long:not(.is-open) blockquote { max-height: 13em; overflow: hidden; -webkit-mask-image: linear-gradient(#000 72%, transparent); mask-image: linear-gradient(#000 72%, transparent); }
 .carousel__controls { display: none; align-items: center; justify-content: space-between; margin-top: 22px; }
 .js .carousel__controls { display: flex; }
 .icon-btn { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; border: 0; background: var(--paper); color: var(--ink); cursor: pointer; transition: background-color .2s ease; }
@@ -311,7 +316,7 @@ h3 { font-size: clamp(1.3rem, 1.1rem + .8vw, 1.65rem); line-height: 1.2; }
 .dots { display: flex; gap: 10px; }
 .dot-btn { width: 12px; height: 12px; border-radius: 50%; border: 0; padding: 0; background: rgba(26, 26, 26, .2); cursor: pointer; }
 .dot-btn[aria-current="true"] { background: var(--sun); box-shadow: 0 0 0 2px var(--ink); }
-@media (max-width: 560px) { .quote { grid-template-columns: minmax(0, 1fr); } .quote figcaption { grid-column: 1; } .quote__watermark { width: 38%; right: -10%; bottom: -22%; } }
+@media (max-width: 560px) { .quote { grid-template-columns: minmax(0, 1fr); } .quote figcaption, .quote__more { grid-column: 1; } .quote__watermark { width: 38%; right: -10%; bottom: -22%; } }
 
 /* ==========================================================================
    Instagram

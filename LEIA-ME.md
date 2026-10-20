@@ -20,12 +20,10 @@ site só tem botões "Acessar portal" que levam até ele.
    `https://forms.gle/LINK-DO-FORMULARIO`. Quando o formulário estiver pronto, procure
    `LINK-DO-FORMULARIO` no `professores.html` e troque pelo link real (ou me envie o link que eu
    troco). **Não publique com o endereço de exemplo**: ele abre uma página de erro.
-2. **Depoimentos são de exemplo.** Os 3 textos da seção "O que as famílias dizem" são
-   fictícios e aparecem com a etiqueta "Exemplo". Troque pelos relatos reais (com
-   autorização de quem escreveu) assim que tiver. Depoimento inventado apresentado como
-   verdadeiro em site comercial pode ser tratado como publicidade enganosa pelo Código de
-   Defesa do Consumidor; por isso, enquanto não houver relatos reais, mantenha a etiqueta
-   "Exemplo" ou apague a seção inteira.
+2. **Depoimentos reais.** Os 7 depoimentos da seção "O que as famílias dizem" são relatos reais enviados pela
+   OLIMAIS. Confirme que cada pessoa autorizou a publicação (e, no caso de alunos menores de idade, que o responsável
+   autorizou). Por privacidade, o site mostra só o primeiro nome e o papel (mãe, pai, aluno), sem nomes de filhos nem de
+   escolas. Guarde a autorização por escrito (uma mensagem de WhatsApp serve).
 3. **Disciplinas, níveis de ensino e preços não aparecem**, porque não tinha essa
    informação. Dá para acrescentar uma seção depois.
 4. **Política de privacidade e termos.** A Política de Privacidade, os Termos de Uso e os Termos de
@@ -105,10 +103,10 @@ robots.txt, sitemap.xml   para o Google
   `index.html` e o `aspect-ratio` correspondente no `css/style.css`.
 - **Quadrinhos do Instagram:** são 4 imagens quadradas (`img/insta-*.jpg`). Troque quando
   postar algo novo que queira mostrar.
-- **Depoimentos:** no `index.html`, procure `ATENÇÃO`. Cada depoimento é um bloco
+- **Depoimentos:** no `index.html`, procure `Depoimentos REAIS`. Cada depoimento é um bloco
   `<figure class="quote">…</figure>`. Para acrescentar um, copie um bloco inteiro e ajuste o
-  `aria-label="1 de 3"` de todos. Para tirar a etiqueta "Exemplo", apague
-  `<span class="tag">Exemplo</span>`.
+  `aria-label="1 de 7"` de todos. Depoimento comprido leva `class="quote quote--long"` (aparece resumido, com o
+  botão "Ler depoimento completo").
 - **Domínio principal:** o endereço `https://olimais.com.br/` aparece no `index.html`
   (canonical, prévia de compartilhamento e dados estruturados), no `professores.html`, no
   `privacidade.html`, no `sitemap.xml` e no `robots.txt`. Se decidir usar `www.olimais.com.br` como principal, troque
