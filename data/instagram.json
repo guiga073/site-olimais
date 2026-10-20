@@ -1,6 +1,30 @@
 {
-  "updated": "2026-10-07T13:25:55Z",
+  "updated": "2026-10-19T13:18:10Z",
   "posts": [
+    {
+      "id": "18371634175214610",
+      "url": "https://www.instagram.com/p/DerUcEiiL7J/",
+      "image": "img/instagram/18371634175214610.jpg",
+      "alt": "Aprender vai muito além de melhorar uma nota. 💛",
+      "video": false,
+      "date": "2026-10-19"
+    },
+    {
+      "id": "18029455409883642",
+      "url": "https://www.instagram.com/reel/DehwsHPtR9P/",
+      "image": "img/instagram/18029455409883642.jpg",
+      "alt": "Vídeo do Instagram: Prazer, somos a OLIMAIS! 💛",
+      "video": true,
+      "date": "2026-10-15"
+    },
+    {
+      "id": "17993402892056982",
+      "url": "https://www.instagram.com/p/DePVk1BtgHA/",
+      "image": "img/instagram/17993402892056982.jpg",
+      "alt": "Às vezes, uma matéria que parecia impossível começa a fazer sentido depois de uma boa explicação. 💛",
+      "video": false,
+      "date": "2026-10-08"
+    },
     {
       "id": "17978033504923005",
       "url": "https://www.instagram.com/p/DeMWvxEFCgN/",
@@ -8,22 +32,6 @@
       "alt": "“Eu não consigo.”",
       "video": false,
       "date": "2026-10-07"
-    },
-    {
-      "id": "18135911404660944",
-      "url": "https://www.instagram.com/p/DeKD4b0Nt5L/",
-      "image": "img/instagram/18135911404660944.jpg",
-      "alt": "A reta final do ano chegou e, com ela, as últimas provas e avaliações. 📚",
-      "video": false,
-      "date": "2026-10-06"
-    },
-    {
-      "id": "18116840422999631",
-      "url": "https://www.instagram.com/p/DeIcpUeFFIp/",
-      "image": "img/instagram/18116840422999631.jpg",
-      "alt": "A Scool agora é OLIMAIS. 💛",
-      "video": false,
-      "date": "2026-10-06"
     }
   ]
 }
