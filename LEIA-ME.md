@@ -52,6 +52,27 @@ robots.txt, sitemap.xml   para o Google
 .nojekyll           avisa o GitHub que não há Jekyll aqui (opcional)
 ```
 
+**Ficam só no repositório do GitHub (não vêm neste pacote, e não devem ser apagados nem reenviados):**
+
+```
+.github/workflows/instagram.yml   a automação que busca os posts do Instagram a cada 6 horas
+scripts/instagram_sync.py         o programa que essa automação roda
+data/instagram.json               a lista dos posts mais recentes (a automação reescreve sozinha)
+img/instagram/                    as imagens desses posts (a automação reescreve sozinha)
+```
+
+### Instagram automático
+
+A seção "Acompanhe a OLIMAIS no Instagram" mostra os 4 posts mais recentes: o `js/main.js` lê o
+`data/instagram.json` (atributo `data-insta-feed` no `index.html`) e troca os 4 quadrinhos fixos
+(`img/insta-*.jpg`) pelos posts. Se o arquivo faltar ou falhar, os quadrinhos fixos continuam
+aparecendo, então eles são a reserva. A chave do Instagram fica **só** no segredo `INSTAGRAM_TOKEN`
+do repositório (Settings → Secrets and variables → Actions) e é renovada sozinha toda segunda-feira.
+O passo a passo completo está no `GUIA-INSTAGRAM.md`.
+
+Se você enviar um pacote do site, **não envie** as pastas `data/` e `img/instagram/` de outro lugar,
+porque elas apagariam os posts já baixados. Este pacote já vem sem elas.
+
 ## 3. Como editar
 
 - **Textos:** os da página principal estão no `index.html`; os da página de professores, no
