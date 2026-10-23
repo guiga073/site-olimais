@@ -1,6 +1,14 @@
 {
-  "updated": "2026-10-19T13:18:10Z",
+  "updated": "2026-10-23T17:08:41Z",
   "posts": [
+    {
+      "id": "17899243155608119",
+      "url": "https://www.instagram.com/p/De1nnoUCGou/",
+      "image": "img/instagram/17899243155608119.jpg",
+      "alt": "Cada aluno tem suas próprias dificuldades, seu ritmo e suas necessidades. E encontrar o acompanhamento certo p…",
+      "video": false,
+      "date": "2026-10-23"
+    },
     {
       "id": "18371634175214610",
       "url": "https://www.instagram.com/p/DerUcEiiL7J/",
@@ -24,14 +32,6 @@
       "alt": "Às vezes, uma matéria que parecia impossível começa a fazer sentido depois de uma boa explicação. 💛",
       "video": false,
       "date": "2026-10-08"
-    },
-    {
-      "id": "17978033504923005",
-      "url": "https://www.instagram.com/p/DeMWvxEFCgN/",
-      "image": "img/instagram/17978033504923005.jpg",
-      "alt": "“Eu não consigo.”",
-      "video": false,
-      "date": "2026-10-07"
     }
   ]
 }
