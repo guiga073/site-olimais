@@ -1,6 +1,14 @@
 {
-  "updated": "2026-10-29T05:49:56Z",
+  "updated": "2026-10-30T12:57:04Z",
   "posts": [
+    {
+      "id": "18120430483943712",
+      "url": "https://www.instagram.com/p/DfHPzZrCL-v/",
+      "image": "img/instagram/18120430483943712.jpg",
+      "alt": "Seu filho precisa de apoio nos estudos, e você também precisa de alguém com quem contar. 💛",
+      "video": false,
+      "date": "2026-10-30"
+    },
     {
       "id": "17899563633672196",
       "url": "https://www.instagram.com/reel/DfD1JZlNXLU/",
@@ -24,14 +32,6 @@
       "alt": "Aprender vai muito além de melhorar uma nota. 💛",
       "video": false,
       "date": "2026-10-19"
-    },
-    {
-      "id": "18029455409883642",
-      "url": "https://www.instagram.com/reel/DehwsHPtR9P/",
-      "image": "img/instagram/18029455409883642.jpg",
-      "alt": "Vídeo do Instagram: Prazer, somos a OLIMAIS! 💛",
-      "video": true,
-      "date": "2026-10-15"
     }
   ]
 }
