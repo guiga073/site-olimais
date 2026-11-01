@@ -479,3 +479,53 @@ h3 { font-size: clamp(1.3rem, 1.1rem + .8vw, 1.65rem); line-height: 1.2; }
   .lm__book { grid-template-columns: minmax(0, 1fr); }
   .lm__cover-img { width: 140px; }
 }
+
+/* ============================ Página Materiais (materiais.html) ============================ */
+.mats-hero { padding-block: clamp(56px, 8vw, 96px) clamp(16px, 3vw, 32px); }
+.mats-hero h1 { width: auto; }
+.mats-lead { margin-top: 1rem; max-width: 34em; }
+.mats { padding-top: clamp(16px, 3vw, 32px); }
+.mats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 520px), 1fr)); gap: clamp(20px, 3vw, 32px); }
+.mat-card { display: grid; grid-template-columns: minmax(0, 150px) minmax(0, 1fr); gap: clamp(18px, 3vw, 28px); align-items: start;
+  background: var(--paper); border: 1px solid rgba(26, 26, 26, .1); border-radius: 28px; padding: clamp(18px, 3vw, 28px); box-shadow: 0 10px 30px rgba(26, 26, 26, .06); }
+.mat-card__cover img { display: block; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 24px rgba(26, 26, 26, .16); }
+.mat-card__tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: .7rem; }
+.mat-card__tags span { font-size: .8rem; font-weight: 600; background: var(--sand); border-radius: 999px; padding: .25rem .65rem; }
+.mat-card__title { font-size: clamp(1.4rem, 1.1rem + 1vw, 1.8rem); }
+.mat-card__title a { text-decoration: none; color: inherit; }
+.mat-card__title a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.mat-card__sub { color: var(--clay-deep); font-weight: 600; font-size: .95rem; margin-top: .3rem; }
+.mat-card__text { margin-top: .8rem; line-height: 1.55; color: var(--ink-2); }
+.mat-card__btn { margin-top: 1.1rem; }
+.mats-more { margin-top: clamp(24px, 4vw, 40px); color: var(--ink-2); }
+.mats-more a { color: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 560px) { .mat-card { grid-template-columns: minmax(0, 1fr); } .mat-card__cover { width: 120px; } .mat-card__btn { width: 100%; justify-content: center; white-space: nowrap; } }
+
+/* Menu completo (telas a partir de 1281 px; abaixo disso vira o botão de menu): com o item "Materiais",
+   o espaçamento padrão não cabia na largura do conteúdo. */
+@media (max-width: 1280px) {
+  .site-header__cta { margin-left: auto; }
+  .menu-btn { display: grid; }
+  .js .site-nav {
+    display: none; position: absolute; left: 0; right: 0; top: 100%;
+    flex-direction: column; align-items: stretch; gap: 8px;
+    padding: 12px var(--gutter) 24px; background: var(--sun);
+    border-bottom: 1px solid rgba(26, 26, 26, .12); box-shadow: 0 18px 30px rgba(26, 26, 26, .12);
+  }
+  .js .is-open .site-nav { display: flex; }
+  .js .site-nav__list { flex-direction: column; margin: 0; gap: 0; }
+  .js .site-nav__list a { display: block; padding: .9rem .2rem; font-size: 1.1rem; border-bottom: 1px solid rgba(26, 26, 26, .16); background: none; }
+  .js .site-nav__social { margin-top: 12px; flex-wrap: wrap; }
+  .js .site-nav__list a[aria-current="page"] { font-weight: 700; }
+  .site-header__bar { flex-wrap: wrap; }
+  .js .site-header__bar { flex-wrap: nowrap; }
+  .site-nav { flex-basis: 100%; order: 3; justify-content: flex-start; padding-bottom: 12px; flex-wrap: wrap; }
+}
+@media (min-width: 1281px) {
+  .site-header__bar { gap: 18px; }
+  .site-nav { gap: 14px; }
+  .site-nav__list { gap: 18px; }
+  .site-nav__list a { font-size: .93rem; }
+  .site-nav__social { gap: .35rem; }
+  .site-nav__social .btn--sm { padding-inline: .8rem; }
+}
