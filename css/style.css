@@ -244,6 +244,7 @@ h3 { font-size: clamp(1.3rem, 1.1rem + .8vw, 1.65rem); line-height: 1.2; }
 .band__text p { font-size: clamp(1.1rem, 1rem + .45vw, 1.3rem); line-height: 1.6; }
 .band__text p + p { margin-top: 1.1em; }
 .band__text strong { font-weight: 700; }
+.band__text .band__actions { margin-top: 1.6em; }
 .band__mark { position: absolute; z-index: 0; right: -4%; bottom: -34%; width: min(620px, 58vw); color: rgba(255, 255, 255, .07); pointer-events: none; }
 @media (max-width: 900px) { .band__grid { grid-template-columns: minmax(0, 1fr); gap: 18px; } .band__text { padding-top: 0; } .band { padding-top: clamp(64px, 12vw, 88px); } }
 
@@ -439,3 +440,42 @@ h3 { font-size: clamp(1.3rem, 1.1rem + .8vw, 1.65rem); line-height: 1.2; }
 }
 
 .doc h2 + p strong:first-child, .doc p > strong:first-child { font-weight: 600; }
+
+/* ============================ Página do Manual do ENEM (manual-do-enem.html) ============================ */
+.lm { position: relative; overflow: clip; padding-block: clamp(56px, 8vw, 96px) clamp(56px, 8vw, 96px); }
+.lm .wrap { position: relative; z-index: 1; }
+.lm__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 460px); gap: clamp(32px, 6vw, 88px); align-items: start; }
+.lm__eyebrow { font-weight: 600; text-transform: uppercase; letter-spacing: .08em; font-size: .85rem; color: var(--clay-deep); margin-bottom: .6rem; }
+.lm h1 { font-size: clamp(2.5rem, 1rem + 4.8vw, 4.6rem); }
+.lm .lead { margin-top: 1rem; max-width: 30em; }
+.lm__book { display: grid; grid-template-columns: minmax(0, 210px) minmax(0, 1fr); gap: clamp(20px, 3vw, 36px); align-items: start; margin-top: clamp(24px, 4vw, 40px); }
+.lm__cover-img { display: block; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 18px 40px rgba(26, 26, 26, .18); }
+.lm__toc-title { font-size: 1.15rem; margin-bottom: .6rem; }
+.lm__topics { list-style: decimal; margin: 0; padding-left: 1.4em; line-height: 1.5; }
+.lm__topics li { margin-bottom: .35rem; }
+.lm__topics li::marker { color: var(--clay-deep); font-weight: 700; }
+.lm__extras { list-style: none; margin: 1rem 0 0; padding: 0; line-height: 1.5; }
+.lm__extras li { position: relative; padding-left: 1.4em; margin-bottom: .45rem; }
+.lm__extras li::before { content: ""; position: absolute; left: 0; top: .5em; width: .62em; height: .62em; border-radius: 50%; background: var(--sun); }
+.lm__card { background: var(--paper); border: 1px solid rgba(26, 26, 26, .1); border-radius: 28px; padding: clamp(22px, 3.5vw, 34px); box-shadow: 0 10px 30px rgba(26, 26, 26, .08); }
+.lm__card-title { font-size: clamp(1.4rem, 1.1rem + 1vw, 1.8rem); margin-bottom: 1rem; }
+.lm__card p { line-height: 1.55; margin-bottom: .8rem; }
+.lm__field { margin-bottom: 14px; }
+.lm__field label { display: block; font-weight: 600; font-size: .95rem; margin-bottom: 6px; }
+.lm__field input { width: 100%; font: inherit; font-size: 1rem; padding: 12px 14px; border: 1.5px solid rgba(26, 26, 26, .22); border-radius: 12px; background: #fff; color: var(--ink); min-height: 48px; }
+.lm__field input:focus { border-color: var(--ink); outline: 3px solid rgba(252, 180, 0, .45); outline-offset: 0; }
+.lm__check { display: flex; gap: 10px; align-items: flex-start; font-size: .95rem; line-height: 1.45; margin: 10px 0; cursor: pointer; }
+.lm__check input { width: 20px; height: 20px; margin-top: 2px; flex: none; accent-color: var(--ink); }
+.lm__check a, .lm__small a, .lm__card p a { color: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.lm__submit { width: 100%; justify-content: center; margin-top: 8px; min-height: 52px; }
+.lm__error { background: #FBE7E1; color: #8E2F14; border-radius: 12px; padding: 10px 12px; font-size: .95rem; margin: 10px 0 0; }
+.lm__small { font-size: .88rem; color: var(--ink-2); margin-top: 12px; }
+.lm__hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+@media (max-width: 900px) {
+  .lm__grid { grid-template-columns: minmax(0, 1fr); }
+  .lm__book { grid-template-columns: minmax(0, 120px) minmax(0, 1fr); }
+}
+@media (max-width: 380px) {
+  .lm__book { grid-template-columns: minmax(0, 1fr); }
+  .lm__cover-img { width: 140px; }
+}

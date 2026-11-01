@@ -123,6 +123,18 @@ porque elas apagariam os posts já baixados. Este pacote já vem sem elas.
   `index.html` e o `aspect-ratio` correspondente no `css/style.css`.
 - **Quadrinhos do Instagram:** são 4 imagens quadradas (`img/insta-*.jpg`). Troque quando
   postar algo novo que queira mostrar.
+- **Manual do ENEM (grátis):** a página é `manual-do-enem.html` (texto, "capa" desenhada e formulário). O formulário
+  manda nome, e-mail, celular e os aceites para o **portal** (`portal.olimais.com.br/api/gratis/manual-enem`), que
+  guarda o cadastro e devolve o link de download. O **PDF fica no portal** (menu "Downloads (Manual)"): **nunca** coloque
+  o PDF neste repositório, que é público. Liberar/pausar os downloads também é no portal. A página inicial tem a faixa
+  "Manual do ENEM" com o botão "Baixar grátis", e o rodapé de algumas páginas tem o link.
+- **Capa e conteúdo do manual na página:** a capa é `img/manual-enem-capa.jpg` (a 1ª página do PDF, reduzida). A lista
+  "O que tem dentro" está no `manual-do-enem.html`. Se lançar uma versão nova do manual, troque o PDF no portal e, se
+  a capa ou os assuntos mudarem, atualize a imagem e a lista aqui.
+- **Divulgar com origem:** use `https://olimais.com.br/manual-do-enem.html?origem=instagram` (troque `instagram` por
+  `whatsapp`, `story`, `google`…). O painel do portal mostra quantas pessoas vieram de cada origem.
+- **Atualização no navegador:** quando mudar `css/style.css` ou `js/main.js`, troque o número depois de `?v=` nas
+  páginas (hoje `20261101b`) para os visitantes receberem a versão nova.
 - **Depoimentos:** no `index.html`, procure `Depoimentos REAIS`. Cada depoimento é um bloco
   `<figure class="quote">…</figure>`. Para acrescentar um, copie um bloco inteiro e ajuste o
   `aria-label="1 de 7"` de todos. Depoimento comprido leva `class="quote quote--long"` (aparece resumido, com o
