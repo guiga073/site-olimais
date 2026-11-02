@@ -1,6 +1,14 @@
 {
-  "updated": "2026-10-30T12:57:04Z",
+  "updated": "2026-11-02T13:49:12Z",
   "posts": [
+    {
+      "id": "18034478255889021",
+      "url": "https://www.instagram.com/p/DfPXh0QiLPz/",
+      "image": "img/instagram/18034478255889021.jpg",
+      "alt": "Online ou presencial? O importante é encontrar a modalidade que funciona melhor para o seu filho e para a roti…",
+      "video": false,
+      "date": "2026-11-02"
+    },
     {
       "id": "18120430483943712",
       "url": "https://www.instagram.com/p/DfHPzZrCL-v/",
@@ -24,14 +32,6 @@
       "alt": "Cada aluno tem suas próprias dificuldades, seu ritmo e suas necessidades. E encontrar o acompanhamento certo p…",
       "video": false,
       "date": "2026-10-23"
-    },
-    {
-      "id": "18371634175214610",
-      "url": "https://www.instagram.com/p/DerUcEiiL7J/",
-      "image": "img/instagram/18371634175214610.jpg",
-      "alt": "Aprender vai muito além de melhorar uma nota. 💛",
-      "video": false,
-      "date": "2026-10-19"
     }
   ]
 }
