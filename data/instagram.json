@@ -1,6 +1,14 @@
 {
-  "updated": "2026-11-02T13:49:12Z",
+  "updated": "2026-11-05T06:48:13Z",
   "posts": [
+    {
+      "id": "17913072996551779",
+      "url": "https://www.instagram.com/reel/DfVn5FYN1jw/",
+      "image": "img/instagram/17913072996551779.jpg",
+      "alt": "Vídeo do Instagram: As notas melhoraram, mas o que essa família destacou foi também a confiança que o filho passou a ter na própri…",
+      "video": true,
+      "date": "2026-11-04"
+    },
     {
       "id": "18034478255889021",
       "url": "https://www.instagram.com/p/DfPXh0QiLPz/",
@@ -24,14 +32,6 @@
       "alt": "Vídeo do Instagram: As provas finais estão chegando e seu filho precisa revisar conteúdos e tirar dúvidas?",
       "video": true,
       "date": "2026-10-29"
-    },
-    {
-      "id": "17899243155608119",
-      "url": "https://www.instagram.com/p/De1nnoUCGou/",
-      "image": "img/instagram/17899243155608119.jpg",
-      "alt": "Cada aluno tem suas próprias dificuldades, seu ritmo e suas necessidades. E encontrar o acompanhamento certo p…",
-      "video": false,
-      "date": "2026-10-23"
     }
   ]
 }
