@@ -1,6 +1,14 @@
 {
-  "updated": "2026-11-11T19:37:06Z",
+  "updated": "2026-11-16T13:58:52Z",
   "posts": [
+    {
+      "id": "17900115492671495",
+      "url": "https://www.instagram.com/reel/DfzPma_tjoK/",
+      "image": "img/instagram/17900115492671495.jpg",
+      "alt": "Vídeo do Instagram: Seu filho deixa para estudar quando a prova já está chegando?",
+      "video": true,
+      "date": "2026-11-16"
+    },
     {
       "id": "18127439173675456",
       "url": "https://www.instagram.com/p/Dfmi-T4CBMe/",
@@ -24,14 +32,6 @@
       "alt": "Às vezes, a maior conquista de um aluno não aparece apenas no boletim. 💛",
       "video": false,
       "date": "2026-11-07"
-    },
-    {
-      "id": "17913072996551779",
-      "url": "https://www.instagram.com/reel/DfVn5FYN1jw/",
-      "image": "img/instagram/17913072996551779.jpg",
-      "alt": "Vídeo do Instagram: As notas melhoraram, mas o que essa família destacou foi também a confiança que o filho passou a ter na própri…",
-      "video": true,
-      "date": "2026-11-04"
     }
   ]
 }
