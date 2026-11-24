@@ -1,6 +1,14 @@
 {
-  "updated": "2026-11-19T20:38:40Z",
+  "updated": "2026-11-24T22:27:14Z",
   "posts": [
+    {
+      "id": "18140377262508352",
+      "url": "https://www.instagram.com/p/DgIBAnaDRnc/",
+      "image": "img/instagram/18140377262508352.jpg",
+      "alt": "Entre escola, atividades, compromissos e a rotina da família, encontrar um horário para estudar nem sempre é s…",
+      "video": false,
+      "date": "2026-11-24"
+    },
     {
       "id": "17994123609059141",
       "url": "https://www.instagram.com/p/Df7JIzsCNG6/",
@@ -24,14 +32,6 @@
       "alt": "Entender uma matéria é um processo. E cada etapa tem sua importância. 💛",
       "video": false,
       "date": "2026-11-11"
-    },
-    {
-      "id": "18160051810505209",
-      "url": "https://www.instagram.com/reel/DfixjrwtQbq/",
-      "image": "img/instagram/18160051810505209.jpg",
-      "alt": "Vídeo do Instagram: Seu filho está com dificuldade em mais de uma matéria? Você pode contar com a OLIMAIS para organizar esse apoi…",
-      "video": true,
-      "date": "2026-11-10"
     }
   ]
 }
